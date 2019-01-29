@@ -2,6 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import Dashboard from './views/Dashboard.vue'
+import Person from './views/Person.vue'
+import ExsitingPerson from './views/ExsitingPerson.vue'
 import CompanyPerf from './views/Companys/CompanyPerf.vue'
 import AllCompanyPerformanceSummary from './views/Companys/AllCompanyPerformanceSummary.vue'
 import AdminDashboard from './views/AdminDashboard.vue'
@@ -24,6 +26,9 @@ import MonthlyPlanSummary from './views/Plans/MonthlyPlanSummary.vue'
 import RampUpPlan from './views/Plans/RampUpPlan.vue'
 import WeeklyRequest from './views/Requests/WeeklyRequest.vue'
 import RequestList from './views/Requests/RequestList.vue'
+import Pool from './views/Pools/Pool.vue'
+import StagingPool from './views/Pools/StagingPool.vue'
+
 
 
 import Calendar from './Pages/Calendar.vue'
@@ -325,6 +330,54 @@ export default new Router({
           breadcrumb: [
             { name: 'Dashboard', href: 'Dashboard' },
             { name: 'RequestList' }
+          ]
+        }
+       
+       },
+       {
+        path: '/Pool',
+        name: 'Pool',
+        component: Pool,
+        meta: {
+          breadcrumb: [
+            { name: 'Dashboard', href: 'Dashboard' },
+            { name: 'Pool' }
+          ]
+        }
+       
+       },
+       {
+        path: '/SP',
+        name: 'SP',
+        component: StagingPool,
+        meta: {
+          breadcrumb: [
+            { name: 'Dashboard', href: 'Dashboard' },
+            { name: 'StagingPool' }
+          ]
+        }
+       
+       },
+       {
+        path: '/Person',
+        name: 'Person',
+        component: Person,
+        meta: {
+          breadcrumb: [
+            { name: 'Dashboard', href: 'Dashboard' },
+            { name: 'Person' }
+          ]
+        }
+       
+       },
+       {
+        path: '/EP',
+        name: 'EP',
+        component: ExsitingPerson,
+        meta: {
+          breadcrumb: [
+            { name: 'Dashboard', href: 'Dashboard' },
+            { name: 'Exsiting Person' }
           ]
         }
        
