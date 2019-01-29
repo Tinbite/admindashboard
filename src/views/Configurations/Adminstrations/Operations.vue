@@ -11,3 +11,10 @@
     
   }
 </script>
+<style>
+.Operations
+{
+  color: #009688
+}
+</style>
+

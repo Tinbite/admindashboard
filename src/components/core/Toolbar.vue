@@ -1,11 +1,13 @@
 <template>
+
   <v-toolbar
     dark
     app
-    :color="$root.themeColor">
+    class='blue-grey darken-4'>
     <v-toolbar-title>
       <v-toolbar-side-icon @click="toggleNavigationBar"></v-toolbar-side-icon>
     </v-toolbar-title>
+    <v-spacer></v-spacer>
     <v-text-field
       flat
       solo-inverted
@@ -60,10 +62,10 @@
           Settings
         </v-card-title>
 
-        <!-- <v-card-text>
+         <v-card-text>
           Choose theme color ?
           <swatches v-model="$root.themeColor" inline colors="material-dark" :exceptions="['#FFFFFF']" shapes="circles" show-border></swatches>
-        </v-card-text> -->
+        </v-card-text> 
 
         <v-card-text>
           Set Up System User
@@ -185,8 +187,10 @@
 
     <v-menu offset-y origin="center center" :nudge-bottom="10" transition="scale-transition">
       <v-btn icon large flat slot="activator" :ripple="false">
-        <v-avatar size="42px">
-          <img src="https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortFlat&accessoriesType=Sunglasses&hairColor=Black&facialHairType=Blank&clotheType=CollarSweater&clotheColor=Black&eyeType=Default&eyebrowType=Default&mouthType=Smile&skinColor=Light"/>
+        <v-avatar size="40px">
+          <v-avatar color="blue-darken-grey">
+      <v-icon dark>account_circle</v-icon>
+    </v-avatar>
         </v-avatar>
       </v-btn>
       <v-list>
@@ -336,3 +340,8 @@ export default {
   }
 };
 </script>
+<style>
+  #core-toolbar a {
+    text-decoration: none;
+  }
+</style>

@@ -11,3 +11,8 @@
     
   }
 </script>
+<style>
+.AllCompPerf {
+  color: #009688
+}
+</style>

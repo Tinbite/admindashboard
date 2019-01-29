@@ -1,6 +1,6 @@
 <template>
-<div class="Docs">
-  <h1>Docs</h1>
+<div class="CL">
+  <h1>Call list</h1>
 </div>
 </template>
 
@@ -11,3 +11,9 @@
     
   }
 </script>
+<style>
+.CL{
+  color:#009688
+}
+</style>
+

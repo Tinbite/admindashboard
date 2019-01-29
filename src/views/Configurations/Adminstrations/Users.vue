@@ -1,6 +1,6 @@
 <template>
-<div class="Permissions">
-  <h1>Permissions</h1>
+<div class="Users">
+  <h1>Users</h1>
 </div>
 </template>
 
@@ -11,3 +11,8 @@
     
   }
 </script>
+<style>
+.Users {
+  color: #009688
+}
+</style>

@@ -1,6 +1,6 @@
 <template>
-<div class="Roles">
-  <h1>Roles</h1>
+<div class="Test">
+  <h1>Test</h1>
 </div>
 </template>
 
@@ -11,3 +11,9 @@
     
   }
 </script>
+<style>
+.Test {
+  color: #009688
+}
+</style>
+

@@ -1,49 +1,54 @@
 <template>
   <v-navigation-drawer
     v-model="toggle"
-    fixed app>
-    <v-toolbar flat dark :color="$root.themeColor" class="toolbar">
-      <router-link :to="{ name: 'dashboard' }">
-        <!-- <img src="static/logo.png" width="36px"></img> -->
-      </router-link>
-      <router-link :to="{ name: 'dashboard' }" class="text">
-         Hahu
-      </router-link>
+    fixed app
+    class='blue-grey darken-4'>
+    <v-toolbar flat dark>
+        <v-toolbar-title class="toolbar">
+         Hahu jobs
+        </v-toolbar-title>
     </v-toolbar>
     <v-list>
-      <v-list-tile @click="changeRoute('dashboard', 1)">
+      <v-list-tile class="teal--text" @click="changeRoute('dashboard', 1)">
         <v-list-tile-action>
-          <v-icon>dashboard</v-icon>
+          <v-icon class="teal--text">dashboard</v-icon>
         </v-list-tile-action>
         <v-list-tile-title :class="[{'active': selectedIndex === 1}, 'item-title' ]" >Dashboard</v-list-tile-title>
       </v-list-tile>
 
-       <v-list-tile @click="changeRoute('Calendar', 2)">
+       <v-list-tile class="teal--text" @click="changeRoute('Calendar', 2)">
         <v-list-tile-action>
-          <v-icon>calendar_today</v-icon>
+          <v-icon class="teal--text">calendar_today</v-icon>
         </v-list-tile-action>
         <v-list-tile-title :class="[{'active': selectedIndex === 2}, 'item-title' ]">Calendar</v-list-tile-title>
       </v-list-tile>
 
-      <v-list-tile @click="changeRoute('CompanyPerf', 3)">
+      <v-list-tile class="teal--text" @click="changeRoute('CompanyPerf', 3)">
         <v-list-tile-action>
-          <v-icon>question_answer</v-icon>
+          <v-icon class="teal--text">question_answer</v-icon>
         </v-list-tile-action>
         <v-list-tile-title :class="[{'active': selectedIndex === 3}, 'item-title' ]">Company performance</v-list-tile-title>
       </v-list-tile>
 
- <v-list-tile @click="changeRoute('AllCompanyPerformanceSummary', 4)">
+ <v-list-tile class="teal--text" @click="changeRoute('AllCompanyPerformanceSummary', 4)">
         <v-list-tile-action>
-          <v-icon>question_answer</v-icon>
+          <v-icon class="teal--text">question_answer</v-icon>
         </v-list-tile-action>
         <v-list-tile-title :class="[{'active': selectedIndex === 4}, 'item-title' ]">All Company Performance Summary</v-list-tile-title>
       </v-list-tile>
 
- <v-list-tile @click="changeRoute('AdminDb', 5)">
+ <v-list-tile class="teal--text" @click="changeRoute('AdminDb', 5)">
         <v-list-tile-action>
-          <v-icon>gavel</v-icon>
+          <v-icon class="teal--text">gavel</v-icon>
         </v-list-tile-action>
         <v-list-tile-title :class="[{'active': selectedIndex === 5}, 'item-title' ]">Admin Dashboard</v-list-tile-title>
+      </v-list-tile>
+
+      <v-list-tile class="teal--text" @click="changeRoute('DailyAsummary', 6)">
+        <v-list-tile-action>
+          <v-icon class="teal--text">assignment</v-icon>
+        </v-list-tile-action>
+        <v-list-tile-title :class="[{'active': selectedIndex === 6}, 'item-title' ]">Daily Allocation Summary</v-list-tile-title>
       </v-list-tile>
 
   <v-list-group
@@ -154,8 +159,9 @@ export default {
 
 <style>
   .toolbar {
-    font-weight: bold;
-    font-size: 18px;
+    font-weight: lighter;
+    font-size: 30px;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
   }
 
   .toolbar .text {

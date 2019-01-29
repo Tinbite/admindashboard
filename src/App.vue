@@ -1,7 +1,7 @@
 <template>
    <div>
     <template v-if="!$route.meta.allowAnonymous">
-      <v-app id="inspire">
+      <v-app id="inspire" class="grey lighten-4">
         <div class="app-container">
           <toolbar @toggleNavigationBar="drawer = !drawer"/>
           <navigation :toggle="drawer"/>
@@ -34,7 +34,7 @@
 }
 </script>
 
-<style>
+<style >
 </style>
 <!--
  <template>

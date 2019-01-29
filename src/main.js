@@ -10,10 +10,10 @@ import 'font-awesome/css/font-awesome.css';
 import Vuetify from 'vuetify';
 
 import 'material-design-icons-iconfont/dist/material-design-icons.css';
-import './styles/global.css';
+//  import './styles/global.css';
 
-import axios from 'axios'
-import VueAxios from 'vue-axios'
+import axios from 'axios';
+import VueAxios from 'vue-axios';
 
 Vue.use(VueAxios, axios);
 
@@ -21,7 +21,7 @@ import fullCalendar from 'vue-fullcalendar';
 import { setupComponents } from './config/setup-components';
 
 import swatches from 'vue-swatches';
-import "vue-swatches/dist/vue-swatches.min.css"
+import "vue-swatches/dist/vue-swatches.min.css";
 
 
 Vue.component('full-calendar', fullCalendar);

@@ -1,6 +1,6 @@
 <template>
-<div class="Industry">
-  <h1>Industry Park</h1>
+<div class="Roles">
+  <h1>Roles</h1>
 </div>
 </template>
 
@@ -11,3 +11,8 @@
     
   }
 </script>
+<style>
+.Roles {
+  color: #009688
+}
+</style>

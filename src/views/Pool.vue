@@ -1,6 +1,6 @@
 <template>
-<div class="Users">
-  <h1>Users</h1>
+<div class="Pool">
+  <h1>Pool</h1>
 </div>
 </template>
 
@@ -11,3 +11,9 @@
     
   }
 </script>
+<style>
+.Pool {
+  color:#009688
+}
+</style>
+
