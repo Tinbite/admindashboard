@@ -15,15 +15,39 @@
       label="Search">
     </v-text-field>
     <v-spacer></v-spacer>
-    <!-- <v-rating
-        v-model="rating"
-        background-color="blue"
-        medium
-        :ripple="false"
-        color="blue"
-        dense /> -->
 
-    <v-dialog
+<v-dialog
+      v-model="dialog"
+      width="500">
+      <v-btn icon slot="activator">
+        <v-icon medium>fingerprint</v-icon>
+      </v-btn>
+      <v-card>
+        <v-card-title class="headline grey lighten-2"
+          primary-title>
+          Identify
+        </v-card-title>
+        <v-divider></v-divider>
+<v-radio-group v-model="row" row>
+            <v-radio label="Person" value="person"></v-radio>
+            <v-radio label="Supervisor" value="supervisor"></v-radio>
+   </v-radio-group>
+        <v-divider></v-divider>
+        <v-card-text>
+          <v-icon color="black" large>fingerprint</v-icon>
+          Finger Print
+        </v-card-text>
+        <v-btn color="teal">Scan</v-btn>
+        <v-divider></v-divider>
+    <v-checkbox label="Identify with ID?" v-model="checkbox1"></v-checkbox>
+       <v-divider></v-divider>
+        <v-card-actions>
+          <v-btn color="blue darken-1" flat @click="dialog = false">Close</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
+
+    <!-- <v-dialog
       v-model="dialog"
       width="500">
       <v-btn icon slot="activator">
@@ -51,7 +75,7 @@
           </v-btn>
         </v-card-actions>
       </v-card>
-    </v-dialog>
+    </v-dialog> -->
 
     <v-dialog
       v-model="dialogSettings"
@@ -62,10 +86,10 @@
           Settings
         </v-card-title>
 
-         <v-card-text>
+         <!-- <v-card-text>
           Choose theme color ?
           <swatches v-model="$root.themeColor" inline colors="material-dark" :exceptions="['#FFFFFF']" shapes="circles" show-border></swatches>
-        </v-card-text> 
+        </v-card-text>  -->
 
         <v-card-text>
           Set Up System User
@@ -146,14 +170,18 @@
     <!-- <v-btn icon href="https://github.com/fatihunlu" :ripple="false">
       <v-icon medium>fab fa-github</v-icon>
     </v-btn> -->
-    <v-menu offset-y origin="center center" :nudge-bottom="10" transition="scale-transition">
+    <v-menu bottom
+          left
+          content-class="dropdown-menu"
+          offset-y
+          transition="slide-y-transition">
 
       <v-btn icon flat slot="activator" @click="notifications.map(x => x.isActive = false)">
-        <v-badge color="green" overlap>
+        <v-badge color="error" overlap>
           <span slot="badge" v-if="notifications.filter(x => x.isActive).length > 0">
              {{ notifications.filter(x => x.isActive).length }}
           </span>
-          <v-icon medium>notifications</v-icon>
+        <v-icon color="white">mdi-bell</v-icon>
         </v-badge>
       </v-btn>
 
@@ -185,7 +213,11 @@
       </v-card>
     </v-menu>
 
-    <v-menu offset-y origin="center center" :nudge-bottom="10" transition="scale-transition">
+    <v-menu bottom
+          left
+          content-class="dropdown-menu"
+          offset-y
+          transition="slide-y-transition">
       <v-btn icon large flat slot="activator" :ripple="false">
         <v-avatar size="40px">
           <v-avatar color="blue-darken-grey">
@@ -219,7 +251,8 @@
 export default {
   data() {
     return {
-      // rating: null,
+      checkbox1: false,
+      row: null,
       dialog: false,
       dialogSettings: false,
       switchEmailNotification: true,

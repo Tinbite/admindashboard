@@ -40,21 +40,21 @@
 
  <v-list-tile class="teal--text" @click="changeRoute('RUP', 4)">
         <v-list-tile-action>
-          <v-icon class="teal--text">file_copy</v-icon>
+          <v-icon></v-icon>
         </v-list-tile-action>
         <v-list-tile-title :class="[{'active': selectedIndex === 4}, 'item-title' ]">Ramp-Up-Plan</v-list-tile-title>
       </v-list-tile>
 
  <v-list-tile class="teal--text" @click="changeRoute('DMP', 5)">
         <v-list-tile-action>
-          <v-icon class="teal--text">list_alt</v-icon>
+          <v-icon></v-icon>
         </v-list-tile-action>
         <v-list-tile-title :class="[{'active': selectedIndex === 5}, 'item-title' ]">Detail Monthly Plan Summary</v-list-tile-title>
       </v-list-tile>
 
  <v-list-tile class="teal--text" @click="changeRoute('MPS', 6)">
         <v-list-tile-action>
-          <v-icon class="teal--text">assignment</v-icon>
+          <v-icon ></v-icon>
         </v-list-tile-action>
         <v-list-tile-title :class="[{'active': selectedIndex === 6}, 'item-title' ]">Monthly Plan Summary</v-list-tile-title>
       </v-list-tile>
@@ -62,6 +62,7 @@
 
 <v-list-group
         prepend-icon="account_balance"
+        collor
         class="teal--text"
       >
         <v-list-tile slot="activator">
@@ -107,14 +108,14 @@
 
      <v-list-tile class="teal--text" @click="changeRoute('WR', 11)">
         <v-list-tile-action>
-          <v-icon class="teal--text">replay</v-icon>
+          <v-icon class="teal--text"></v-icon>
         </v-list-tile-action>
         <v-list-tile-title :class="[{'active': selectedIndex === 11}, 'item-title' ]">Weekly Request</v-list-tile-title>
       </v-list-tile>
 
        <v-list-tile class="teal--text" @click="changeRoute('RL', 12)">
         <v-list-tile-action>
-          <v-icon class="teal--text">replay</v-icon>
+          <v-icon class="teal--text"></v-icon>
         </v-list-tile-action>
         <v-list-tile-title :class="[{'active': selectedIndex === 12}, 'item-title' ]">Request List</v-list-tile-title>
       </v-list-tile>
@@ -130,14 +131,14 @@
 
    <v-list-tile class="teal--text" @click="changeRoute('Allocation', 13)">
         <v-list-tile-action>
-          <v-icon class="teal--text">subdirectory_arrow_right</v-icon>
+          <v-icon class="teal--text"></v-icon>
         </v-list-tile-action>
         <v-list-tile-title :class="[{'active': selectedIndex === 13}, 'item-title' ]">Allocation</v-list-tile-title>
       </v-list-tile>
 
        <v-list-tile class="teal--text" @click="changeRoute('MA', 14)">
         <v-list-tile-action>
-          <v-icon class="teal--text">subdirectory_arrow_right</v-icon>
+          <v-icon class="teal--text"></v-icon>
         </v-list-tile-action>
         <v-list-tile-title :class="[{'active': selectedIndex === 14}, 'item-title' ]">Manual Allocation</v-list-tile-title>
       </v-list-tile>
@@ -151,14 +152,14 @@
 
        <v-list-tile class="teal--text" @click="changeRoute('AR', 16)">
         <v-list-tile-action>
-          <v-icon class="teal--text">subdirectory_arrow_right</v-icon>
+          <v-icon class="teal--text"></v-icon>
         </v-list-tile-action>
         <v-list-tile-title :class="[{'active': selectedIndex === 16}, 'item-title' ]">Allocation Response</v-list-tile-title>
       </v-list-tile>
 
        <v-list-tile class="teal--text" @click="changeRoute('CA', 17)">
         <v-list-tile-action>
-          <v-icon class="teal--text">subdirectory_arrow_right</v-icon>
+          <v-icon class="teal--text"></v-icon>
         </v-list-tile-action>
         <v-list-tile-title :class="[{'active': selectedIndex === 17}, 'item-title' ]">Confirmed Allocation</v-list-tile-title>
       </v-list-tile>
@@ -181,7 +182,7 @@
 
       <v-list-tile class="teal--text" @click="changeRoute('SP', 19)">
         <v-list-tile-action>
-          <v-icon class="teal--text">mdi-account-network</v-icon>
+          <v-icon class="teal--text"></v-icon>
         </v-list-tile-action>
         <v-list-tile-title :class="[{'active': selectedIndex === 19}, 'item-title' ]">Staging Pool</v-list-tile-title>
       </v-list-tile>
@@ -212,6 +213,7 @@
 
   <v-list-group
         prepend-icon="settings"
+        class="teal--text"
       >
         <v-list-tile slot="activator">
           <v-list-tile-title>Configurations</v-list-tile-title>
@@ -220,66 +222,67 @@
 
       <v-list-group
       sub-group
+      class="teal--text"
         >
         <v-list-tile slot="activator">
           <v-list-tile-title class="item-title">Registration</v-list-tile-title>
         </v-list-tile>
-        <v-list-tile @click="changeRoute('Industry', 22)">
+        <v-list-tile class="teal--text" @click="changeRoute('Industry', 22)">
           <v-list-tile-action>
-            <v-icon>business</v-icon>
+            <v-icon class="teal--text">business</v-icon>
           </v-list-tile-action>
           <v-list-tile-title :class="[{'active': selectedIndex === 22}, 'item-title' ]">Industry Park</v-list-tile-title>
         </v-list-tile>
-        <v-list-tile @click="changeRoute('Companies', 23)">
+        <v-list-tile class="teal--text" @click="changeRoute('Companies', 23)">
           <v-list-tile-action>
-            <v-icon>account_balance</v-icon>
+            <v-icon class="teal--text">account_balance</v-icon>
           </v-list-tile-action>
           <v-list-tile-title :class="[{'active': selectedIndex === 23}, 'item-title' ]">Companies</v-list-tile-title>
         </v-list-tile>
       
-        <v-list-tile @click="changeRoute('Reasons', 24)">
+        <v-list-tile class="teal--text" @click="changeRoute('Reasons', 24)">
           <v-list-tile-action>
-            <v-icon>account_balance</v-icon>
+            <v-icon class="teal--text">account_balance</v-icon>
           </v-list-tile-action>
           <v-list-tile-title :class="[{'active': selectedIndex === 24}, 'item-title' ]">Reasons</v-list-tile-title>
         </v-list-tile>
 
-<v-list-tile @click="changeRoute('Locations', 25)">
+<v-list-tile class="teal--text" @click="changeRoute('Locations', 25)">
           <v-list-tile-action>
-            <v-icon>add_location</v-icon>
+            <v-icon class="teal--text">add_location</v-icon>
           </v-list-tile-action>
           <v-list-tile-title :class="[{'active': selectedIndex === 25}, 'item-title' ]">Locations</v-list-tile-title>
         </v-list-tile>
  
- <v-list-tile @click="changeRoute('Regions', 26)">
+ <v-list-tile class="teal--text" @click="changeRoute('Regions', 26)">
           <v-list-tile-action>
-            <v-icon></v-icon>
+            <v-icon class="teal--text"></v-icon>
           </v-list-tile-action>
           <v-list-tile-title :class="[{'active': selectedIndex === 26}, 'item-title' ]">Regions</v-list-tile-title>
         </v-list-tile>
       
-   <v-list-tile @click="changeRoute('Zones', 27)">
+   <v-list-tile class="teal--text" @click="changeRoute('Zones', 27)">
           <v-list-tile-action>
             <v-icon></v-icon>
           </v-list-tile-action>
           <v-list-tile-title :class="[{'active': selectedIndex === 27}, 'item-title' ]">Zones</v-list-tile-title>
         </v-list-tile> 
 
- <v-list-tile @click="changeRoute('Woredas', 28)">
+ <v-list-tile class="teal--text" @click="changeRoute('Woredas', 28)">
           <v-list-tile-action>
             <v-icon></v-icon>
           </v-list-tile-action>
           <v-list-tile-title :class="[{'active': selectedIndex === 28}, 'item-title' ]">Woredas</v-list-tile-title>
         </v-list-tile>
 
-        <v-list-tile @click="changeRoute('Kebeles', 29)">
+        <v-list-tile class="teal--text" @click="changeRoute('Kebeles', 29)">
           <v-list-tile-action>
             <v-icon></v-icon>
           </v-list-tile-action>
           <v-list-tile-title :class="[{'active': selectedIndex === 29}, 'item-title' ]">Kebeles</v-list-tile-title>
         </v-list-tile>
 
-        <v-list-tile @click="changeRoute('Cities', 30)">
+        <v-list-tile class="teal--text" @click="changeRoute('Cities', 30)">
           <v-list-tile-action>
             <v-icon></v-icon>
           </v-list-tile-action>
@@ -287,20 +290,20 @@
         </v-list-tile>
       </v-list-group>
 
- <v-list-tile @click="changeRoute('GL', 31)">
+ <v-list-tile class="teal--text" @click="changeRoute('GL', 31)">
           <v-list-tile-action>
             <v-icon></v-icon>
           </v-list-tile-action>
           <v-list-tile-title :class="[{'active': selectedIndex === 31}, 'item-title' ]">Grading Labels</v-list-tile-title>
         </v-list-tile>
-<v-list-tile @click="changeRoute('PS', 32)">
+<v-list-tile class="teal--text" @click="changeRoute('PS', 32)">
           <v-list-tile-action>
             <v-icon></v-icon>
           </v-list-tile-action>
           <v-list-tile-title :class="[{'active': selectedIndex === 32}, 'item-title' ]">Period setting</v-list-tile-title>
         </v-list-tile>
 
-<v-list-tile @click="changeRoute('Test', 33)">
+<v-list-tile class="teal--text" @click="changeRoute('Test', 33)">
           <v-list-tile-action>
             <v-icon></v-icon>
           </v-list-tile-action>
@@ -308,35 +311,36 @@
         </v-list-tile>
 
       <v-list-group
-        sub-group>
+        sub-group
+        class="teal--text">
         <v-list-tile slot="activator">
           <v-list-tile-title class="item-title">Adminstrations</v-list-tile-title>
         </v-list-tile>
 
-      <v-list-tile @click="changeRoute('Users', 34)">
+      <v-list-tile class="teal--text" @click="changeRoute('Users', 34)">
           <v-list-tile-action>
           </v-list-tile-action>
           <v-list-tile-title :class="[{'active': selectedIndex === 34}, 'item-title' ]">Users</v-list-tile-title>
         </v-list-tile>
-        <v-list-tile @click="changeRoute('Roles', 35)">
+        <v-list-tile class="teal--text" @click="changeRoute('Roles', 35)">
           <v-list-tile-action>
             <!-- <v-icon class='cyan'>account_balance</v-icon> -->
           </v-list-tile-action>
           <v-list-tile-title :class="[{'active': selectedIndex === 35}, 'item-title' ]">Roles</v-list-tile-title>
         </v-list-tile>
-<v-list-tile @click="changeRoute('Docs', 36)">
+<v-list-tile class="teal--text" @click="changeRoute('Docs', 36)">
           <v-list-tile-action>
             <!-- <v-icon class='cyan'>account_balance</v-icon> -->
           </v-list-tile-action>
           <v-list-tile-title :class="[{'active': selectedIndex === 36}, 'item-title' ]">Docs</v-list-tile-title>
         </v-list-tile>
-        <v-list-tile @click="changeRoute('Operations', 37)">
+        <v-list-tile class="teal--text" @click="changeRoute('Operations', 37)">
           <v-list-tile-action>
             <!-- <v-icon class='cyan'>account_balance</v-icon> -->
           </v-list-tile-action>
           <v-list-tile-title :class="[{'active': selectedIndex === 37}, 'item-title' ]">Operations</v-list-tile-title>
         </v-list-tile>
-        <v-list-tile @click="changeRoute('Permissions', 38)">
+        <v-list-tile class="teal--text" @click="changeRoute('Permissions', 38)">
           <v-list-tile-action>
             <!-- <v-icon class='cyan'>account_balance</v-icon> -->
           </v-list-tile-action>
@@ -397,16 +401,17 @@
         <v-list-tile-action>
           <v-icon class="teal--text">list_alt</v-icon>
         </v-list-tile-action>
-        <v-list-tile-title :class="[{'active': selectedIndex === 46}, 'item-title' ]">MR</v-list-tile-title>
+        <v-list-tile-title :class="[{'active': selectedIndex === 46}, 'item-title' ]">Monthly Report</v-list-tile-title>
       </v-list-tile>
 <v-list-group
  prepend-icon="enhanced_encryption"
+ class="teal--text"
         >
         <v-list-tile slot="activator">
           <v-list-tile-title class="item-title">Authorization</v-list-tile-title>
         </v-list-tile>
 
-        <v-list-tile @click="$router.push({ name: 'Login' })">
+        <v-list-tile  class="teal--text" @click="$router.push({ name: 'Login' })">
           <v-list-tile-action>
             <v-icon>cancel</v-icon>
           </v-list-tile-action>
@@ -453,15 +458,16 @@ export default {
   }
 
   .item-title {
-    font-size: 17px;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 300;
   }
   .item-sub-title {
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 300;
   }
 
   .active {
-    font-weight: bold;
+    font-weight: lighter;
   }
+  
 </style>

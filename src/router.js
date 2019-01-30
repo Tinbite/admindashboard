@@ -4,6 +4,12 @@ import Router from 'vue-router'
 import Dashboard from './views/Dashboard.vue'
 import Person from './views/Person.vue'
 import ExsitingPerson from './views/ExsitingPerson.vue'
+import Supervisor from './views/Supervisor.vue'
+import Manage from './views/Manage.vue'
+import AbscandList from './views/AbscandList.vue'
+import CallList from './views/CallList.vue'
+import MonthlyReport from './views/MonthlyReport.vue'
+import ScreeningReport from './views/ScreeningReport.vue'
 import CompanyPerf from './views/Companys/CompanyPerf.vue'
 import AllCompanyPerformanceSummary from './views/Companys/AllCompanyPerformanceSummary.vue'
 import AdminDashboard from './views/AdminDashboard.vue'
@@ -28,6 +34,9 @@ import WeeklyRequest from './views/Requests/WeeklyRequest.vue'
 import RequestList from './views/Requests/RequestList.vue'
 import Pool from './views/Pools/Pool.vue'
 import StagingPool from './views/Pools/StagingPool.vue'
+import GradingLables from './views/Configurations/GradingLables.vue'
+import PeriodSetting from './views/Configurations/PeriodSetting.vue'
+import Test from './views/Configurations/Test.vue'
 
 
 
@@ -42,7 +51,7 @@ export default new Router({
 //    base: process.env.BASE_URL,
   routes: [
     {
-        path: '/dashboard',
+        path: '/',
         name: 'dashboard',
         component: Dashboard,
         meta: {
@@ -382,5 +391,112 @@ export default new Router({
         }
        
        },
+
+       {
+        path: '/GL',
+        name: 'GL',
+        component: GradingLables,
+        meta: {
+          breadcrumb: [
+            { name: 'Dashboard', href: 'Dashboard' },
+            { name: 'Grading Lables' }
+          ]
+        }
+       
+       },
+
+       
+       {
+        path: '/PS',
+        name: 'PS',
+        component: PeriodSetting,
+        meta: {
+          breadcrumb: [
+            { name: 'Dashboard', href: 'Dashboard' },
+            { name: 'Period Setting' }
+          ]
+        }
+       },
+       
+       {
+        path: '/Test',
+        name: 'Test',
+        component: Test,
+        meta: {
+          breadcrumb: [
+            { name: 'Dashboard', href: 'Dashboard' },
+            { name: 'Test' }
+          ]
+        }
+       
+       },
+       {
+        path: '/Manage',
+        name: 'Manage',
+        component: Manage,
+        meta: {
+          breadcrumb: [
+            { name: 'Dashboard', href: 'Dashboard' },
+            { name: 'Manage' }
+          ]
+        }
+       },
+
+       {
+        path: '/Supervisor',
+        name: 'Supervisor',
+        component: Supervisor,
+        meta: {
+          breadcrumb: [
+            { name: 'Dashboard', href: 'Dashboard' },
+            { name: 'Supervisor' }
+          ]
+        }
+       },
+
+       {
+        path: '/Abslist',
+        name: 'Abslist',
+        component: AbscandList,
+        meta: {
+          breadcrumb: [
+            { name: 'Dashboard', href: 'Dashboard' },
+            { name: 'Supervisor' }
+          ]
+        }
+       },
+       {
+        path: '/CL',
+        name: 'CL',
+        component: CallList,
+        meta: {
+          breadcrumb: [
+            { name: 'Dashboard', href: 'Dashboard' },
+            { name: 'Call List' }
+          ]
+        }
+       },
+       {
+        path: '/MR',
+        name: 'MR',
+        component: MonthlyReport,
+        meta: {
+          breadcrumb: [
+            { name: 'Dashboard', href: 'Dashboard' },
+            { name: 'MonthlyReport' }
+          ]
+        }
+       },
+       {
+        path: '/SR',
+        name: 'SR',
+        component: ScreeningReport,
+        meta: {
+          breadcrumb: [
+            { name: 'Dashboard', href: 'Dashboard' },
+            { name: 'ScreeningReport' }
+          ]
+        }
+       }, 
   ]
 })

@@ -12,7 +12,7 @@
   }
 </script>
 <style>
-.RMP {
+.RUP {
   color:#009688
 }
 </style>

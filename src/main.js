@@ -8,6 +8,7 @@ import 'vuetify/dist/vuetify.min.css';
 import 'font-awesome/css/font-awesome.css';
 
 import Vuetify from 'vuetify';
+import '@mdi/font/css/materialdesignicons.css'
 
 import 'material-design-icons-iconfont/dist/material-design-icons.css';
 //  import './styles/global.css';
@@ -29,7 +30,19 @@ Vue.component('swatches', swatches);
 
 setupComponents(Vue);
 
-Vue.use(Vuetify);
+Vue.use(Vuetify, {
+  iconfont: 'mdi',
+  theme: {
+    primary: '#4caf50',
+  secondary: '#4caf50',
+  tertiary: '#495057',
+  accent: '#82B1FF',
+  error: '#f55a4e',
+  info: '#00d3ee',
+  success: '#5cb860',
+  warning: '#ffa21a'
+  }
+});
 
 Vue.config.productionTip = false
 
