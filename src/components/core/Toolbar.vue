@@ -18,26 +18,30 @@
 
 <v-dialog
       v-model="dialog"
-      width="500">
+      width="800"
+      height="300">
       <v-btn icon slot="activator">
         <v-icon medium>fingerprint</v-icon>
       </v-btn>
-      <v-card>
+      <v-card class="card">
         <v-card-title class="headline grey lighten-2"
           primary-title>
-          Identify
+          IDENTIFY
         </v-card-title>
         <v-divider></v-divider>
 <v-radio-group v-model="row" row>
-            <v-radio label="Person" value="person"></v-radio>
-            <v-radio label="Supervisor" value="supervisor"></v-radio>
+            <v-radio color="teal" label="Person" value="person"></v-radio>
+            <v-radio color="teal" label="Supervisor" value="supervisor"></v-radio>
    </v-radio-group>
         <v-divider></v-divider>
-        <v-card-text>
-          <v-icon color="black" large>fingerprint</v-icon>
+        <v-card-text class="finger">
+          <v-icon color="black" size="200">fingerprint</v-icon>
+          <br>
           Finger Print
         </v-card-text>
-        <v-btn color="teal">Scan</v-btn>
+       <div class="text-xs-center">
+    <v-btn round color="teal" dark>Scan</v-btn>
+  </div>
         <v-divider></v-divider>
     <v-checkbox label="Identify with ID?" v-model="checkbox1"></v-checkbox>
        <v-divider></v-divider>
@@ -47,36 +51,7 @@
       </v-card>
     </v-dialog>
 
-    <!-- <v-dialog
-      v-model="dialog"
-      width="500">
-      <v-btn icon slot="activator">
-        <v-icon medium>rate_review</v-icon>
-      </v-btn>
-      <v-card>
-        <v-card-title class="headline grey lighten-2"
-          primary-title>
-          Privacy Policy
-        </v-card-title>
-
-        <v-card-text>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </v-card-text>
-
-        <v-divider></v-divider>
-
-        <v-card-actions>
-          <v-spacer></v-spacer>
-          <v-btn
-            color="primary"
-            flat
-            @click="dialog = false">
-            I accept
-          </v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-dialog> -->
-
+   
     <v-dialog
       v-model="dialogSettings"
       width="700">
@@ -85,12 +60,6 @@
           primary-title>
           Settings
         </v-card-title>
-
-         <!-- <v-card-text>
-          Choose theme color ?
-          <swatches v-model="$root.themeColor" inline colors="material-dark" :exceptions="['#FFFFFF']" shapes="circles" show-border></swatches>
-        </v-card-text>  -->
-
         <v-card-text>
           Set Up System User
           <v-form>
@@ -167,9 +136,6 @@
       {{ result }}
     </v-snackbar>
 
-    <!-- <v-btn icon href="https://github.com/fatihunlu" :ripple="false">
-      <v-icon medium>fab fa-github</v-icon>
-    </v-btn> -->
     <v-menu bottom
           left
           content-class="dropdown-menu"
@@ -266,10 +232,13 @@ export default {
       result: '',
       items: [
         {
-          icon: 'account_circle',
+          icon: 'mdi-face',
           href: '#',
           title: 'Profile',
-          click: (e) => {
+          click: () => {
+            const vm = this;
+
+            vm.$router.push({ name: 'profile' });
           }
         },
         {
@@ -376,5 +345,17 @@ export default {
 <style>
   #core-toolbar a {
     text-decoration: none;
+
   }
+  .finger {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+  
+  }
+  .btn{
+    color: teal;
+    
+  }
+ 
 </style>

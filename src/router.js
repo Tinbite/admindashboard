@@ -42,6 +42,7 @@ import Test from './views/Configurations/Test.vue'
 
 import Calendar from './Pages/Calendar.vue'
 import Login from './Pages/core/Login.vue'
+import Profile from './Pages/core/Profile.vue'
 
 
 Vue.use(Router)
@@ -493,8 +494,19 @@ export default new Router({
         component: ScreeningReport,
         meta: {
           breadcrumb: [
-            { name: 'Dashboard', href: 'Dashboard' },
+            { name: 'Dashboard', href: 'dashboard' },
             { name: 'ScreeningReport' }
+          ]
+        }
+       },
+       {
+        path: '/profile',
+        name: 'profile',
+        component: Profile,
+        meta: {
+          breadcrumb: [
+            { name: 'Profile', href: 'profile' },
+           
           ]
         }
        }, 
