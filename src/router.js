@@ -62,13 +62,13 @@ export default new Router({
         }
       },
       {
-        path: '/CompanyPerfs',
-        name: 'CompanyPerfs',
+        path: '/CompanyPerf',
+        name: 'CompanyPerf',
         component: CompanyPerf,
         meta: {
             breadcrumb: [
-              { name: 'Dashboard', href: 'Dashboard' },
-              { name: 'CompanyPerf' }
+              { name: 'Dashboard', href: 'dashboard' },
+              { name: 'Company performance' }
             ]
           }
       },
@@ -78,7 +78,7 @@ export default new Router({
         component: Company,
         meta: {
             breadcrumb: [
-              { name: 'Dashboard', href: 'Dashboard' },
+              { name: 'Dashboard', href: 'dashboard' },
               { name: 'Company' }
             ]
           }
@@ -89,7 +89,7 @@ export default new Router({
         component: CompaniesMonthlyReport,
         meta: {
             breadcrumb: [
-              { name: 'Dashboard', href: 'Dashboard' },
+              { name: 'Dashboard', href: 'dashboard' },
               { name: 'Companies Monthly Report' }
             ]
           }
@@ -101,7 +101,7 @@ export default new Router({
         component: Calendar,
         meta: {
           breadcrumb: [
-            { name: 'Dashboard', href: 'Dashboard' },
+            { name: 'Dashboard', href: 'dashboard' },
             { name: 'Calendar' }
           ]
         }
@@ -120,7 +120,7 @@ export default new Router({
       component: IndustryPark,
       meta: {
         breadcrumb: [
-          { name: 'Dashboard', href: 'Dashboard' },
+          { name: 'Dashboard', href: 'dashboard' },
           { name: 'Industry' }
         ]
       }
@@ -131,7 +131,7 @@ export default new Router({
       component: Companies,
       meta: {
         breadcrumb: [
-          { name: 'Dashboard', href: 'Dashboard' },
+          { name: 'Dashboard', href: 'dashboard' },
           { name: 'Companies' }
         ]
       }
@@ -143,7 +143,7 @@ export default new Router({
       component: AllCompanyPerformanceSummary,
       meta: {
         breadcrumb: [
-          { name: 'Dashboard', href: 'Dashboard' },
+          { name: 'Dashboard', href: 'dashboard' },
           { name: 'AllCompPerf' }
         ]
       }
@@ -156,7 +156,7 @@ export default new Router({
       component: AdminDashboard,
       meta: {
         breadcrumb: [
-          { name: 'Dashboard', href: 'Dashboard' },
+          { name: 'Dashboard', href: 'dashboard' },
           { name: 'AdminDb' }
         ]
       }
@@ -168,7 +168,7 @@ export default new Router({
       component: Users,
       meta: {
         breadcrumb: [
-          { name: 'Dashboard', href: 'Dashboard' },
+          { name: 'Dashboard', href: 'dashboard' },
           { name: 'Users' }
         ]
       }
@@ -180,7 +180,7 @@ export default new Router({
       component: Roles,
       meta: {
         breadcrumb: [
-          { name: 'Dashboard', href: 'Dashboard' },
+          { name: 'Dashboard', href: 'dashboard' },
           { name: 'Roles' }
         ]
       }
@@ -192,7 +192,7 @@ export default new Router({
       component: Docs,
       meta: {
         breadcrumb: [
-          { name: 'Dashboard', href: 'Dashboard' },
+          { name: 'Dashboard', href: 'dashboard' },
           { name: 'Docs' }
         ]
       }
@@ -204,7 +204,7 @@ export default new Router({
       component: Operations,
       meta: {
         breadcrumb: [
-          { name: 'Dashboard', href: 'Dashboard' },
+          { name: 'Dashboard', href: 'dashboard' },
           { name: 'Operations' }
         ]
       }
@@ -216,7 +216,7 @@ export default new Router({
       component: Permissions,
       meta: {
         breadcrumb: [
-          { name: 'Dashboard', href: 'Dashboard' },
+          { name: 'Dashboard', href: 'dashboard' },
           { name: 'Permissions' }
         ]
       }
@@ -228,7 +228,7 @@ export default new Router({
         component: DailyAllocationSummary,
         meta: {
           breadcrumb: [
-            { name: 'Dashboard', href: 'Dashboard' },
+            { name: 'Dashboard', href: 'dashboard' },
             { name: ' Daily Allocation Summary' }
           ]
         }
@@ -240,7 +240,7 @@ export default new Router({
         component: Allocation,
         meta: {
           breadcrumb: [
-            { name: 'Dashboard', href: 'Dashboard' },
+            { name: 'Dashboard', href: 'dashboard' },
             { name: ' Allocation' }
           ]
         }
@@ -252,7 +252,7 @@ export default new Router({
         component: ConfirmedAllocation,
         meta: {
           breadcrumb: [
-            { name: 'Dashboard', href: 'Dashboard' },
+            { name: 'Dashboard', href: 'dashboard' },
             { name: 'Confirmed Allocation' }
           ]
         }
@@ -264,7 +264,7 @@ export default new Router({
         component: ManualAllocation,
         meta: {
           breadcrumb: [
-            { name: 'Dashboard', href: 'Dashboard' },
+            { name: 'Dashboard', href: 'dashboard' },
             { name: 'Manual Allocation' }
           ]
         }
@@ -276,7 +276,7 @@ export default new Router({
         component: AllocationResponse,
         meta: {
           breadcrumb: [
-            { name: 'Dashboard', href: 'Dashboard' },
+            { name: 'Dashboard', href: 'dashboard' },
             { name: 'Allocation Response' }
           ]
         }
@@ -288,7 +288,7 @@ export default new Router({
         component: DetailMonthlyPlan,
         meta: {
           breadcrumb: [
-            { name: 'Dashboard', href: 'Dashboard' },
+            { name: 'Dashboard', href: 'dashboard' },
             { name: 'Detail Monthly Plan' }
           ]
         }
@@ -300,7 +300,7 @@ export default new Router({
         component: MonthlyPlanSummary,
         meta: {
           breadcrumb: [
-            { name: 'Dashboard', href: 'Dashboard' },
+            { name: 'Dashboard', href: 'dashboard' },
             { name: 'Monthly Plan Summary' }
           ]
         }
@@ -312,7 +312,7 @@ export default new Router({
         component: RampUpPlan,
         meta: {
           breadcrumb: [
-            { name: 'Dashboard', href: 'Dashboard' },
+            { name: 'Dashboard', href: 'dashboard' },
             { name: 'Ramp-Up-Plan' }
           ]
         }
@@ -325,7 +325,7 @@ export default new Router({
         component: WeeklyRequest,
         meta: {
           breadcrumb: [
-            { name: 'Dashboard', href: 'Dashboard' },
+            { name: 'Dashboard', href: 'dashboard' },
             { name: 'Weekly Request' }
           ]
         }
@@ -338,7 +338,7 @@ export default new Router({
         component: RequestList,
         meta: {
           breadcrumb: [
-            { name: 'Dashboard', href: 'Dashboard' },
+            { name: 'Dashboard', href: 'dashboard' },
             { name: 'RequestList' }
           ]
         }
@@ -350,7 +350,7 @@ export default new Router({
         component: Pool,
         meta: {
           breadcrumb: [
-            { name: 'Dashboard', href: 'Dashboard' },
+            { name: 'Dashboard', href: 'dashboard' },
             { name: 'Pool' }
           ]
         }
@@ -362,7 +362,7 @@ export default new Router({
         component: StagingPool,
         meta: {
           breadcrumb: [
-            { name: 'Dashboard', href: 'Dashboard' },
+            { name: 'Dashboard', href: 'dashboard' },
             { name: 'StagingPool' }
           ]
         }
@@ -374,7 +374,7 @@ export default new Router({
         component: Person,
         meta: {
           breadcrumb: [
-            { name: 'Dashboard', href: 'Dashboard' },
+            { name: 'Dashboard', href: 'dashboard' },
             { name: 'Person' }
           ]
         }
@@ -386,7 +386,7 @@ export default new Router({
         component: ExsitingPerson,
         meta: {
           breadcrumb: [
-            { name: 'Dashboard', href: 'Dashboard' },
+            { name: 'Dashboard', href: 'dashboard' },
             { name: 'Exsiting Person' }
           ]
         }
@@ -399,7 +399,7 @@ export default new Router({
         component: GradingLables,
         meta: {
           breadcrumb: [
-            { name: 'Dashboard', href: 'Dashboard' },
+            { name: 'Dashboard', href: 'dashboard' },
             { name: 'Grading Lables' }
           ]
         }
@@ -413,7 +413,7 @@ export default new Router({
         component: PeriodSetting,
         meta: {
           breadcrumb: [
-            { name: 'Dashboard', href: 'Dashboard' },
+            { name: 'Dashboard', href: 'dashboard' },
             { name: 'Period Setting' }
           ]
         }
@@ -425,7 +425,7 @@ export default new Router({
         component: Test,
         meta: {
           breadcrumb: [
-            { name: 'Dashboard', href: 'Dashboard' },
+            { name: 'Dashboard', href: 'dashboard' },
             { name: 'Test' }
           ]
         }
@@ -437,7 +437,7 @@ export default new Router({
         component: Manage,
         meta: {
           breadcrumb: [
-            { name: 'Dashboard', href: 'Dashboard' },
+            { name: 'Dashboard', href: 'dashboard' },
             { name: 'Manage' }
           ]
         }
@@ -449,7 +449,7 @@ export default new Router({
         component: Supervisor,
         meta: {
           breadcrumb: [
-            { name: 'Dashboard', href: 'Dashboard' },
+            { name: 'Dashboard', href: 'dashboard' },
             { name: 'Supervisor' }
           ]
         }
@@ -461,7 +461,7 @@ export default new Router({
         component: AbscandList,
         meta: {
           breadcrumb: [
-            { name: 'Dashboard', href: 'Dashboard' },
+            { name: 'Dashboard', href: 'dashboard' },
             { name: 'Supervisor' }
           ]
         }
@@ -472,7 +472,7 @@ export default new Router({
         component: CallList,
         meta: {
           breadcrumb: [
-            { name: 'Dashboard', href: 'Dashboard' },
+            { name: 'Dashboard', href: 'dashboard' },
             { name: 'Call List' }
           ]
         }
@@ -483,7 +483,7 @@ export default new Router({
         component: MonthlyReport,
         meta: {
           breadcrumb: [
-            { name: 'Dashboard', href: 'Dashboard' },
+            { name: 'Dashboard', href: 'dashboard' },
             { name: 'MonthlyReport' }
           ]
         }

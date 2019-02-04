@@ -62,7 +62,6 @@
 
 <v-list-group
         prepend-icon="account_balance"
-        collor
         class="teal--text"
       >
         <v-list-tile slot="activator">
@@ -71,28 +70,28 @@
 
   <v-list-tile class="teal--text" @click="changeRoute('Company', 7)">
         <v-list-tile-action>
-          <v-icon class="teal--text">question_answer</v-icon>
+          <v-icon></v-icon>
         </v-list-tile-action>
         <v-list-tile-title :class="[{'active': selectedIndex === 7}, 'item-title' ]">Company</v-list-tile-title>
       </v-list-tile>
 
       <v-list-tile class="teal--text" @click="changeRoute('CompanyPerf', 8)">
         <v-list-tile-action>
-          <v-icon class="teal--text">question_answer</v-icon>
+          <v-icon ></v-icon>
         </v-list-tile-action>
         <v-list-tile-title :class="[{'active': selectedIndex === 8}, 'item-title' ]">Company performance</v-list-tile-title>
       </v-list-tile>
 
  <v-list-tile class="teal--text" @click="changeRoute('AllCompPerf', 9)">
         <v-list-tile-action>
-          <v-icon class="teal--text">question_answer</v-icon>
+          <v-icon class="teal--text"></v-icon>
         </v-list-tile-action>
         <v-list-tile-title :class="[{'active': selectedIndex === 9}, 'item-title' ]">All Company Performance Summary</v-list-tile-title>
       </v-list-tile>
 
  <v-list-tile class="teal--text" @click="changeRoute('CMR', 10)">
         <v-list-tile-action>
-          <v-icon class="teal--text">question_answer</v-icon>
+          <v-icon class="teal--text"></v-icon>
         </v-list-tile-action>
         <v-list-tile-title :class="[{'active': selectedIndex === 10}, 'item-title' ]">Companies Monthly Report</v-list-tile-title>
       </v-list-tile> 
@@ -166,7 +165,7 @@
 </v-list-group>
 
 <v-list-group
-        prepend-icon="person"
+        prepend-icon="mdi-account-network"
         class="teal--text"
       >
         <v-list-tile slot="activator">
@@ -175,7 +174,7 @@
 
 <v-list-tile class="teal--text" @click="changeRoute('Pool', 18)">
         <v-list-tile-action>
-          <v-icon class="teal--text">person</v-icon>
+          <v-icon class="teal--text"></v-icon>
         </v-list-tile-action>
         <v-list-tile-title :class="[{'active': selectedIndex === 18}, 'item-title' ]">Pool</v-list-tile-title>
       </v-list-tile>
@@ -189,7 +188,7 @@
 </v-list-group>
 
 <v-list-group
-        prepend-icon="settings"
+        prepend-icon="list_alt"
         class="teal--text"
       >
         <v-list-tile slot="activator">
@@ -242,7 +241,7 @@
       
         <v-list-tile class="teal--text" @click="changeRoute('Reasons', 24)">
           <v-list-tile-action>
-            <v-icon class="teal--text">account_balance</v-icon>
+            <v-icon class="teal--text"></v-icon>
           </v-list-tile-action>
           <v-list-tile-title :class="[{'active': selectedIndex === 24}, 'item-title' ]">Reasons</v-list-tile-title>
         </v-list-tile>
@@ -351,21 +350,21 @@
     
     <v-list-tile class="teal--text" @click="changeRoute('Manage', 39)">
         <v-list-tile-action>
-          <v-icon class="teal--text"></v-icon>
+          <v-icon class="teal--text">mdi-account-settings</v-icon>
         </v-list-tile-action>
         <v-list-tile-title :class="[{'active': selectedIndex === 39}, 'item-title' ]">Manage</v-list-tile-title>
       </v-list-tile>
 
        <v-list-tile class="teal--text" @click="changeRoute('Person', 40)">
         <v-list-tile-action>
-          <v-icon class="teal--text">list_alt</v-icon>
+          <v-icon class="teal--text">person</v-icon>
         </v-list-tile-action>
         <v-list-tile-title :class="[{'active': selectedIndex === 40}, 'item-title' ]">Person</v-list-tile-title>
       </v-list-tile>
 
  <v-list-tile class="teal--text" @click="changeRoute('EP', 41)">
         <v-list-tile-action>
-          <v-icon class="teal--text">list_alt</v-icon>
+          <v-icon class="teal--text">mdi-account-check</v-icon>
         </v-list-tile-action>
         <v-list-tile-title :class="[{'active': selectedIndex === 41}, 'item-title' ]">Exisiting Person</v-list-tile-title>
       </v-list-tile>
@@ -379,20 +378,20 @@
 
        <v-list-tile class="teal--text" @click="changeRoute('Abslist', 43)">
         <v-list-tile-action>
-          <v-icon class="teal--text">list_alt</v-icon>
+          <v-icon class="teal--text">list</v-icon>
         </v-list-tile-action>
         <v-list-tile-title :class="[{'active': selectedIndex === 43}, 'item-title' ]">AbscandList</v-list-tile-title>
       </v-list-tile>
 
        <v-list-tile class="teal--text" @click="changeRoute('CL', 44)">
         <v-list-tile-action>
-          <v-icon class="teal--text">list_alt</v-icon>
+          <v-icon class="teal--text">phone</v-icon>
         </v-list-tile-action>
         <v-list-tile-title :class="[{'active': selectedIndex === 44}, 'item-title' ]">Call list</v-list-tile-title>
       </v-list-tile>
  <v-list-tile class="teal--text" @click="changeRoute('SR', 45)">
         <v-list-tile-action>
-          <v-icon class="teal--text">list_alt</v-icon>
+          <v-icon class="teal--text">mdi-account-card-details</v-icon>
         </v-list-tile-action>
         <v-list-tile-title :class="[{'active': selectedIndex === 45}, 'item-title' ]">Screening Report</v-list-tile-title>
       </v-list-tile>

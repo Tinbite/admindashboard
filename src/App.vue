@@ -34,7 +34,7 @@
 }
 </script>
 
-<style >
+<style>
 </style>
 <!--
  <template>

@@ -23,9 +23,9 @@
       <v-btn icon slot="activator">
         <v-icon medium>fingerprint</v-icon>
       </v-btn>
-      <v-card class="card">
-        <v-card-title class="headline grey lighten-2"
-          primary-title>
+      <v-card>
+        <v-card-title class="card 'headline grey lighten-2' "
+         >
           IDENTIFY
         </v-card-title>
         <v-divider></v-divider>
@@ -159,7 +159,7 @@
           <v-list two-line class="pa-0">
           <template v-for="(item, index) in notifications">
             <v-divider :key="index" />
-            <v-list-tile avatar :key="item.title" @click.parent="item.onClick">
+            <v-list-tile avatar :key="item.title">
             <v-list-tile-avatar :color="item.color">
               <v-icon dark>{{item.icon}}</v-icon>
             </v-list-tile-avatar>
@@ -356,6 +356,11 @@ export default {
   .btn{
     color: teal;
     
+  }
+  .card{
+    text-align: left;
+    font-size: 30px;
+    font-weight: bold;
   }
  
 </style>

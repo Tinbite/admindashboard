@@ -1,5 +1,5 @@
 <template>
-  <v-app id="login" class="secondary">
+  <v-app id="login" class="teal">
     <v-content>
       <v-container fluid fill-height>
         <v-layout align-center justify-center>
@@ -8,7 +8,7 @@
               <v-card-text>
                 <div class="layout column align-center">
                   <!-- <img src="static/logo.png" alt="Vue Material Admin" width="180" height="180"> -->
-                  <h1 class="flex my-4 primary--text">HaHu</h1>
+                  <h1 class="flex my-4 primary--text">HaHu Jobs</h1>
                 </div>
                 <v-form>
                   <v-text-field
@@ -33,7 +33,7 @@
               </v-card-text>
               <v-card-actions>
                 <v-spacer></v-spacer>
-                <v-btn block color="primary" @click="login" :loading="loading">Login</v-btn>
+                <v-btn dark block color="teal" @click="login" :loading="loading">Login</v-btn>
               </v-card-actions>
             </v-card>
           </v-flex>
@@ -100,5 +100,8 @@ export default {
     left: 0;
     content: "";
     z-index: 0;
+  }
+  .h1{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
 </style>

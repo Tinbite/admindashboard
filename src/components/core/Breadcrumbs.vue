@@ -41,12 +41,13 @@ export default {
 <style>
   .breadcrumbs .link {
     text-decoration: none;
-    color: #737373;
+    color:teal;
     font: bold 24px Sans-Serif;
     letter-spacing: -1px;
     white-space: nowrap;
     display: inline-block;
     position: relative;
   }
+  
 
 </style>
