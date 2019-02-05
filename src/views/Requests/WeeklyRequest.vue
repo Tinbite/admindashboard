@@ -1,9 +1,17 @@
 <template>
+<div class="weeklyR">
   <v-card>
-    <v-card-title>
-      Companies monthly report
-      <v-spacer></v-spacer>
-     
+    <v-btn color="teal"
+      class="white--text"
+      @click="changeRoute('addnew', 1)">
+      Add new
+      
+      </v-btn>
+        <v-spacer></v-spacer>
+      <v-flex class="weeklyR" 
+       right
+      xs12
+      md5>
       <v-text-field
       color="blue"
         v-model="search"
@@ -12,12 +20,16 @@
         single-line
         hide-details
       ></v-text-field>
+      </v-flex>
+      <div class="text-xs-right">
       <v-btn color="teal"
-      class="white--text">
+      class="white--text"
+      >
       Tools
+    
       </v-btn>
-    </v-card-title>
-    <v-data-table
+      </div>
+    <v-data-table class="weeklyR"
       :headers="headers"
       :items="leters"
       :search="search"
@@ -25,16 +37,14 @@
       <template slot="items" slot-scope="props">
         <td>{{ props.item.name }}</td>
         <td class="text-xs-right">{{ props.item.Fname }}</td>
-        <td class="text-xs-right">{{ props.item.month }}</td>
-        <td class="text-xs-right">{{ props.item.year }}</td>
-        <td class="text-xs-right">{{ props.item.entrydate }}</td>
-        <td class="text-xs-right">{{ props.item.submittedby }}</td>
+        <td class="text-xs-right">{{ props.item.detail }}</td>
       </template>
       <v-alert slot="no-results" :value="true" color="error" icon="warning">
         Your search for "{{ search }}" found no results.
       </v-alert>
     </v-data-table>
   </v-card>
+</div>
 </template>
 <script>
   export default {
@@ -49,23 +59,33 @@
             value: 'name'
           },
           { text: 'Name', value: 'Fname' },
-          { text: 'Month', value: 'month' },
-          { text: 'Year', value: 'year' },
-          { text: 'Entry Date', value: 'entrydate' },
-          { text: 'Submmited by', value: 'submittedby' },
+          { text: 'Detail', value: 'detail' }
         ],
       leters: [
           {
-            name: 1,
-            Fname: 'abebe',
-            month: 'Jan',
-            year:2018,
-            entrydate:2,
-            submittedby: 'me'
+            name: '',
+            Fname: '',
+            detail: '',
+           
           },
           
         ]
       }
+    },
+    methods: {
+    changeRoute(routeName, selectedIndex) {
+      const vm = this;
+
+      vm.selectedIndex = selectedIndex;
+
+      return vm.$router.push({ name: routeName });
     }
   }
+  }
 </script>
+<style >
+.weeklyR{
+  padding-left: 30px;
+  padding-right: 30px;
+}
+</style>

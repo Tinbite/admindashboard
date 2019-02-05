@@ -40,6 +40,7 @@
                   md6
                 >
                   <v-text-field
+                  color="deep-purple"
             ref="name"
             v-model="name"
             :rules="[() => !!name || 'This field is required']"
@@ -53,16 +54,23 @@
                   md5
                 >
                   <v-text-field
-                    label="Email Address"
-                    class="purple-input"/>
+        v-model="email"
+        :rules="[rules.email]"
+        color="deep-purple"
+        label="Email address"
+        type="email"
+      ></v-text-field>
                 </v-flex>
                 <v-flex
                   xs12
                   md4
                 >
-                  <v-text-field
-                    label="Phone .No"
-                    class="purple-input"/>
+                      <v-text-field
+        v-model="phone"
+        color="deep-purple"
+        label="Phone number"
+        mask="phone"
+      ></v-text-field>
                 </v-flex>
                 <v-flex
                   xs12
@@ -70,7 +78,7 @@
                 >
                   <v-text-field
                     label="Type"
-                    class="purple-input"/>
+                    color="deep-purple"/>
                 </v-flex>
                 <v-flex
                   xs12
@@ -195,17 +203,22 @@
 
 <script>
 export default {
-  data(){
-    return{
+  data: () => ({
       loader: null,
       loading3: false,
       tab:null,
+      email: undefined,
+      phine: undefined,
       errorMessages:'',
       name:null,
-      formHasErrors: false,
+      rules: {
+        email: v => (v || '').match(/@/) || 'Please enter a valid email',
+        length: len => v => (v || '').length >= len || `Invalid character length, required ${len}`,
+        required: v => !!v || 'This field is required',
+    },
+    formHasErrors: false,
         items: ['Basic Information','System Password']
-    }
-  },
+  }),
    watch: {
       loader () {
         const l = this.loader

@@ -21,6 +21,7 @@ import Docs from './views/Configurations/Adminstrations/Docs.vue'
 import Operations from './views/Configurations/Adminstrations/Operations.vue'
 import Permissions from './views/Configurations/Adminstrations/Permissions.vue'
 import DailyAllocationSummary from './views/Allocations/DailyAllocationSummary.vue'
+import newallocation from './views/Allocations/newallocation.vue'
 import Allocation from './views/Allocations/Allocation.vue'
 import ConfirmedAllocation from './views/Allocations/ConfirmedAllocation.vue'
 import ManualAllocation from './views/Allocations/ManualAllocation.vue'
@@ -30,6 +31,7 @@ import CompaniesMonthlyReport from './views/Companys/CompaniesMonthlyReport.vue'
 import DetailMonthlyPlan from './views/Plans/DetailMonthlyPlan.vue'
 import MonthlyPlanSummary from './views/Plans/MonthlyPlanSummary.vue'
 import RampUpPlan from './views/Plans/RampUpPlan.vue'
+import addingnewrequest from './views/Requests/addingnewrequest.vue'
 import WeeklyRequest from './views/Requests/WeeklyRequest.vue'
 import RequestList from './views/Requests/RequestList.vue'
 import Pool from './views/Pools/Pool.vue'
@@ -247,6 +249,18 @@ export default new Router({
        
        },
        {
+        path: '/newallocation',
+        name: 'new',
+        component: newallocation,
+        meta: {
+          breadcrumb: [
+            { name: 'Dashboard', href: 'dashboard' },
+            { name: ' Manual Allocation' }
+          ]
+        }
+       
+       },
+       {
         path: '/CA',
         name: 'CA',
         component: ConfirmedAllocation,
@@ -314,6 +328,18 @@ export default new Router({
           breadcrumb: [
             { name: 'Dashboard', href: 'dashboard' },
             { name: 'Ramp-Up-Plan' }
+          ]
+        }
+       
+       },
+       {
+        path: '/addnewrequest',
+        name: 'addnew',
+        component: addingnewrequest,
+        meta: {
+          breadcrumb: [
+            { name: 'Dashboard', href: 'WR' },
+            { name: 'Register new Labour request' }
           ]
         }
        
