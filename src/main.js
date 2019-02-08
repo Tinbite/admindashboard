@@ -4,6 +4,7 @@ import Vue from 'vue';
 import App from './App';
 import router from './router';
 
+
 import 'vuetify/dist/vuetify.min.css';
 import 'font-awesome/css/font-awesome.css';
 
@@ -47,6 +48,12 @@ Vue.use(Vuetify, {
 });
 
 Vue.config.productionTip = false
+
+
+import VueMaterial from 'vue-material';
+import 'vue-material/dist/vue-material.min.css';
+
+Vue.use(VueMaterial);
 
 /* eslint-disable no-new */
 new Vue({

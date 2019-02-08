@@ -1,3 +1,4 @@
+
 <template>
 <div class="profile">
 <v-tabs class="tab"
@@ -287,6 +288,5 @@ export default {
     }
   }
 </style>
-
 
 
