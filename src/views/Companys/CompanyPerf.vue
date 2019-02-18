@@ -1,20 +1,12 @@
 <template>
-<v-container
-    fluid
-     wrap
-        grid-list-xl
-    >
-    <v-layout
-      justify-left
-      wrap
-    >
-    <v-flex xs12 md4>
+<div>
+    <v-flex xs12 md15>
       <div class="card">
       <v-card>
         <v-card-text>
         <v-flex
-                  xs13
-                  md10>
+                  xs12
+                  md15>
           <v-autocomplete
           color="blue"
             label="Select a company"
@@ -22,8 +14,8 @@
           ></v-autocomplete>
         </v-flex>
         <v-flex
-                  xs13
-                  md10>
+                  xs12
+                  md15>
           <v-autocomplete
           color="blue"
           ref="year"
@@ -34,8 +26,8 @@
           ></v-autocomplete>
         </v-flex>
          <v-flex
-                  xs13
-                  md10>
+                  xs12
+                  md15>
           <v-autocomplete
           color="blue"
           ref="week"
@@ -45,6 +37,7 @@
             outline
           ></v-autocomplete>
          </v-flex>
+        
           <div class="text-xs-center">
           <v-btn outline medium fab color="teal">
       <v-icon>print</v-icon>
@@ -60,7 +53,7 @@
       <v-btn  round color="teal" slot="activator" dark>
         Show manual allocation detail
       </v-btn>
-      
+   
       
       <v-card>
         <v-card-title class="card"
@@ -68,7 +61,7 @@
           Manual allocation detail for
         </v-card-title> 
           <v-divider></v-divider>
-          <v-card-text>
+          <v-card-text v-model="row">
 Date <br> Amount <br> Allocated By  <br> Reported by <br> Description</v-card-text>
 <v-divider></v-divider>
 <v-card-actions>
@@ -76,16 +69,13 @@ Date <br> Amount <br> Allocated By  <br> Reported by <br> Description</v-card-te
         </v-card-actions>
       </v-card>
           </v-dialog>
+         
         </v-card-text>
       </v-card>
       </div>
     </v-flex>
     
- <v-flex
-        xs12
-        md6
-       
-      >
+      <br>
         <v-card class="industry-wide">
           <v-divider></v-divider>
           <div class="text-xs-center">
@@ -94,9 +84,8 @@ Date <br> Amount <br> Allocated By  <br> Reported by <br> Description</v-card-te
         </v-card-text>
           </div>
         </v-card>
-      </v-flex>
-    </v-layout>
-    </v-container>
+      
+    </div>
 </template>
 
 <script>

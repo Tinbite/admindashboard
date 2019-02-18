@@ -287,6 +287,13 @@
           </v-list-tile-action>
           <v-list-tile-title :class="[{'active': selectedIndex === 30}, 'item-title' ]">Cities</v-list-tile-title>
         </v-list-tile>
+
+            <v-list-tile class="teal--text" @click="changeRoute('Category',47 )">
+          <v-list-tile-action>
+            <v-icon></v-icon>
+          </v-list-tile-action>
+          <v-list-tile-title :class="[{'active': selectedIndex === 47}, 'item-title' ]">Category</v-list-tile-title>
+        </v-list-tile>
       </v-list-group>
 
  <v-list-tile class="teal--text" @click="changeRoute('GL', 31)">

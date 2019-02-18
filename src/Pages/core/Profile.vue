@@ -209,7 +209,7 @@ export default {
       loading3: false,
       tab:null,
       email: undefined,
-      phine: undefined,
+      phone: undefined,
       errorMessages:'',
       name:null,
       rules: {

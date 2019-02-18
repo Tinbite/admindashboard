@@ -41,13 +41,8 @@
                   <v-text-field v-model="editedItem.name" label="Name"></v-text-field>
                 </v-flex>
                 <v-card-text>
-                       <v-flex xs12 sm6 md4>
-                 <v-text-field 
-           v-model="editedItem.region" label="Region"></v-text-field>
-                </v-flex>
-                <v-flex xs12 sm6 md4>
-                 <v-text-field 
-           v-model="editedItem.remark" label="Remark"></v-text-field>
+                <v-flex xs5 sm6 md4>
+                 <v-text-field v-model="editedItem.description" label="Description"></v-text-field>
                 </v-flex>
                 </v-card-text>
               </v-layout>
@@ -70,8 +65,7 @@
     >
       <template slot="items" slot-scope="props">
         <td>{{ props.item.name }}</td>
-         <td class="text-xs-right">{{ props.item.region }}</td>
-        <td class="text-xs-right">{{ props.item.remark }}</td>
+        <td class="text-xs-right">{{ props.item.description }}</td>
         <td class="justify-center layout px-0">
           
           <v-icon
@@ -113,22 +107,19 @@
           sortable: false,
           value: 'name'
         },
-        { text: 'Region', value: 'region' },
-        { text: 'Remark', value: 'remark' },
+        { text: 'Description', value: 'description' },
         { text: 'Actions', value: 'name', sortable: false }
       ],
-      
+  
       names: [],
       editedIndex: -1,
       editedItem: {
         name: '',
-        region:'',
-        remark:''
+        description:''
       },
       defaultItem: {
         name: '',
-        region:'',
-         remark:''
+       description:''
       }
     }),
 
@@ -153,13 +144,11 @@
         this.names = [
           {
            name: 'abera',
-           region:'',
-        remark:''
+        description:''
           },
           {
             name: 'bebe',
-            region:'',
-         remark:''
+       description:''
           },
         ]
       },

@@ -1,6 +1,7 @@
 <template>
 <div>
 <v-card>
+  <v-card-title>
   <v-btn color="primary" dark @click="dialog2 = true">New request</v-btn>
    <v-spacer></v-spacer>
    <v-flex xs12 md4 class="text-xs-right">
@@ -17,6 +18,7 @@
       class="white--text">
       Tools
       </v-btn>
+  </v-card-title>
       <v-spacer></v-spacer>
       <v-data-table
       :headers="headers"

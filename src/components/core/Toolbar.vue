@@ -5,7 +5,7 @@
     app
     class='blue-grey darken-4'>
     <v-toolbar-title>
-      <v-toolbar-side-icon @click="toggleNavigationBar"></v-toolbar-side-icon>
+      <v-toolbar-side-icon color="teal--text" @click="toggleNavigationBar"></v-toolbar-side-icon>
     </v-toolbar-title>
     <v-spacer></v-spacer>
     <v-text-field
@@ -20,7 +20,7 @@
       v-model="dialog"
       width="800"
       height="300">
-      <v-btn icon slot="activator">
+      <v-btn color="teal--text" icon slot="activator">
         <v-icon medium>fingerprint</v-icon>
       </v-btn>
       <v-card>
@@ -104,7 +104,7 @@
                 <v-flex xs12 xs6 md11>
                   <v-switch
                     label="Email Notification"
-                    color="success"
+                    color="teal"
                     v-model="switchEmailNotification" />
                 </v-flex>
 
@@ -147,7 +147,7 @@
           <span slot="badge" v-if="notifications.filter(x => x.isActive).length > 0">
              {{ notifications.filter(x => x.isActive).length }}
           </span>
-        <v-icon color="white">mdi-bell</v-icon>
+        <v-icon color="teal">mdi-bell</v-icon>
         </v-badge>
       </v-btn>
 
@@ -186,7 +186,7 @@
           transition="slide-y-transition">
       <v-btn icon large flat slot="activator" :ripple="false">
         <v-avatar size="40px">
-          <v-avatar color="blue-darken-grey">
+          <v-avatar color="teal--text">
       <v-icon dark>account_circle</v-icon>
     </v-avatar>
         </v-avatar>

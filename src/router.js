@@ -14,6 +14,16 @@ import CompanyPerf from './views/Companys/CompanyPerf.vue'
 import AllCompanyPerformanceSummary from './views/Companys/AllCompanyPerformanceSummary.vue'
 import AdminDashboard from './views/AdminDashboard.vue'
 import IndustryPark from './views/Configurations/Registrations/IndustryPark.vue'
+import Reasons from './views/Configurations/Registrations/Reasons.vue'
+import Regions from './views/Configurations/Registrations/Regions.vue'
+import Zones from './views/Configurations/Registrations/Zones.vue'
+import newperiodsetting from './views/Configurations/newperiodsetting.vue'
+import newuser from './views/Configurations/Adminstrations/newuser.vue'
+import Category from './views/Configurations/Registrations/Category.vue'
+import Woredas from './views/Configurations/Registrations/Woredas.vue'
+import Cities from './views/Configurations/Registrations/Cities.vue'
+import Kebeles from './views/Configurations/Registrations/Kebeles.vue'
+import Locations from './views/Configurations/Registrations/Locations.vue'
 import Companies from './views/Configurations/Registrations/Companies.vue'
 import Users from './views/Configurations/Adminstrations/Users.vue'
 import Roles from './views/Configurations/Adminstrations/Roles.vue'
@@ -124,6 +134,116 @@ export default new Router({
         breadcrumb: [
           { name: 'Dashboard', href: 'dashboard' },
           { name: 'Industry' }
+        ]
+      }
+    },
+    {
+      path: '/Reasons',
+      name: 'Reasons',
+      component: Reasons,
+      meta: {
+        breadcrumb: [
+          { name: 'Dashboard', href: 'dashboard' },
+          { name: 'Reasons' }
+        ]
+      }
+    },
+    {
+      path: '/Locations',
+      name: 'Locations',
+      component: Locations,
+      meta: {
+        breadcrumb: [
+          { name: 'Dashboard', href: 'dashboard' },
+          { name: 'Locations' }
+        ]
+      }
+    },
+    {
+      path: '/Zones',
+      name: 'Zones',
+      component: Zones,
+      meta: {
+        breadcrumb: [
+          { name: 'Dashboard', href: 'dashboard' },
+          { name: 'Zones' }
+        ]
+      }
+    },
+    {
+      path: '/Kebeles',
+      name: 'Kebeles',
+      component: Kebeles,
+      meta: {
+        breadcrumb: [
+          { name: 'Dashboard', href: 'dashboard' },
+          { name: 'Kebeles' }
+        ]
+      }
+    },
+    {
+      path: '/Woredas',
+      name: 'Woredas',
+      component: Woredas,
+      meta: {
+        breadcrumb: [
+          { name: 'Dashboard', href: 'dashboard' },
+          { name: 'Woredas' }
+        ]
+      }
+    },
+    {
+      path: '/pnew',
+      name: 'pnew',
+      component: newperiodsetting,
+      meta: {
+        breadcrumb: [
+          { name: 'Dashboard', href: 'dashboard' },
+          { name: 'Adding new period setting' }
+        ]
+      }
+    },
+    {
+      path: '/Cities',
+      name: 'Cities',
+      component: Cities,
+      meta: {
+        breadcrumb: [
+          { name: 'Dashboard', href: 'dashboard' },
+          { name: 'Cities' }
+        ]
+      }
+    },
+    {
+      path: '/newuser',
+      name: 'newuser',
+      component: newuser,
+      meta: {
+        breadcrumb: [
+          { name: 'Dashboard', href: 'dashboard' },
+          { name: 'New user' }
+        ]
+      }
+    },
+    {
+      path: '/Regions',
+      name: 'Regions',
+      component: Regions,
+      meta: {
+        breadcrumb: [
+          { name: 'Dashboard', href: 'dashboard' },
+          { name: 'Regions' }
+        ]
+      }
+    },
+    {
+      path: '/Category',
+      name: 'Category',
+      component: Category,
+      meta: {
+        breadcrumb: [
+          { name: 'Dashboard', href: 'dashboard' },
+          { name: 'Category' }
         ]
       }
     },

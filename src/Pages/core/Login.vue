@@ -79,7 +79,7 @@ export default {
       }
 
       if (vm.userEmail === vm.$root.userEmail && vm.password === vm.$root.userPassword) {
-        vm.$router.push({ name: 'Dashboard' });
+        vm.$router.push({ name: 'dashboard' });
       }
       else {
         vm.error = true;

@@ -60,6 +60,7 @@
         <td class="text-xs-right">{{ props.item.zone }}</td>
         <td class="text-xs-right">{{ props.item.city }}</td>
         <td class="text-xs-right">{{ props.item.woreda }}</td>
+        <td class="text-xs-right">{{ props.item.kebele }}</td>
         <td class="justify-center layout px-0">
           <v-icon
             small
@@ -89,32 +90,35 @@
       dialog: false,
       headers: [
         {
-          text: 'Dessert (100g serving)',
+          text: 'Names',
           align: 'left',
           sortable: false,
           value: 'name'
         },
-        { text: 'Calories', value: 'calories' },
-        { text: 'Fat (g)', value: 'fat' },
-        { text: 'Carbs (g)', value: 'carbs' },
-        { text: 'Protein (g)', value: 'protein' },
+        { text: 'Region', value: 'region' },
+        { text: 'Zone', value: 'zone' },
+        { text: 'City', value: 'city' },
+        { text: 'Woreda', value: 'woreda' },
+        { text: 'Kebele', value: 'kebele' },
         { text: 'Actions', value: 'name', sortable: false }
       ],
-      desserts: [],
+      names: [],
       editedIndex: -1,
       editedItem: {
         name: '',
-        calories: 0,
-        fat: 0,
-        carbs: 0,
-        protein: 0
+        region: 0,
+        zone: 0,
+        city: 0,
+        woreda: 0,
+        kebele: 0,
       },
       defaultItem: {
         name: '',
-        calories: 0,
-        fat: 0,
-        carbs: 0,
-        protein: 0
+         region: 0,
+        zone: 0,
+        city: 0,
+        woreda: 0,
+        kebele:0
       }
     }),
 
@@ -136,89 +140,99 @@
 
     methods: {
       initialize () {
-        this.desserts = [
+        this.names = [
           {
-            name: 'Frozen Yogurt',
-            calories: 159,
-            fat: 6.0,
-            carbs: 24,
-            protein: 4.0
+            name: 'Fantahun',
+             region: 'amhara',
+        zone: 1,
+        city: 'a.a',
+        woreda: 11,
+        kebele:2
           },
           {
-            name: 'Ice cream sandwich',
-            calories: 237,
-            fat: 9.0,
-            carbs: 37,
-            protein: 4.3
+            name: 'abebe',
+             region: 'a.a',
+        zone: 3,
+        city: 'a.a',
+        woreda: 10,
+        kebele:3
           },
           {
             name: 'Eclair',
-            calories: 262,
-            fat: 16.0,
-            carbs: 23,
-            protein: 6.0
+            region: 'hawasa',
+        zone: 6,
+        city: 'hawasa',
+        woreda: 8,
+        kebele:4
           },
           {
             name: 'Cupcake',
-            calories: 305,
-            fat: 3.7,
-            carbs: 67,
-            protein: 4.3
+            region: 'tigray',
+        zone: 3,
+        city: 'mekele',
+        woreda: 10,
+        kebele:5
           },
           {
             name: 'Gingerbread',
-            calories: 356,
-            fat: 16.0,
-            carbs: 49,
-            protein: 3.9
+            region: 'a.a',
+        zone: 10,
+        city: 'a.a',
+        woreda: 2,
+        kebele:6
           },
           {
             name: 'Jelly bean',
-            calories: 375,
-            fat: 0.0,
-            carbs: 94,
-            protein: 0.0
+                 region: 'a.a',
+        zone: 10,
+        city: 'a.a',
+        woreda: 2,
+        kebele:8
           },
           {
             name: 'Lollipop',
-            calories: 392,
-            fat: 0.2,
-            carbs: 98,
-            protein: 0
+                region: 'a.a',
+        zone: 10,
+        city: 'a.a',
+        woreda: 2,
+        kebele:8
           },
           {
             name: 'Honeycomb',
-            calories: 408,
-            fat: 3.2,
-            carbs: 87,
-            protein: 6.5
+                  region: 'a.a',
+        zone: 10,
+        city: 'a.a',
+        woreda: 2,
+        kebele:6
           },
           {
             name: 'Donut',
-            calories: 452,
-            fat: 25.0,
-            carbs: 51,
-            protein: 4.9
+                 region: 'a.a',
+        zone: 10,
+        city: 'a.a',
+        woreda: 2,
+        kebele:5
           },
           {
             name: 'KitKat',
-            calories: 518,
-            fat: 26.0,
-            carbs: 65,
-            protein: 7
+                 region: 'a.a',
+        zone: 10,
+        city: 'a.a',
+        woreda: 2,
+        kebele:5
           }
         ]
       },
 
       editItem (item) {
-        this.editedIndex = this.desserts.indexOf(item)
+        this.editedIndex = this.names.indexOf(item)
         this.editedItem = Object.assign({}, item)
         this.dialog = true
       },
 
       deleteItem (item) {
         const index = this.desserts.indexOf(item)
-        confirm('Are you sure you want to delete this item?') && this.desserts.splice(index, 1)
+        confirm('Are you sure you want to delete this item?') && this.names.splice(index, 1)
       },
 
       close () {
@@ -231,9 +245,9 @@
 
       save () {
         if (this.editedIndex > -1) {
-          Object.assign(this.desserts[this.editedIndex], this.editedItem)
+          Object.assign(this.names[this.editedIndex], this.editedItem)
         } else {
-          this.desserts.push(this.editedItem)
+          this.names.push(this.editedItem)
         }
         this.close()
       }
